@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data = [65, 77, 76, 1, 6, 8, 12]
+        let newEl = 99;
+        let position = 2;
+        console.log(data);
+        // reverse arr traversing/loop;
+        for (let i = data.length - 1; i >= 0; i--) {
+            if (i >= position) {
+                // increase a arr element or length;
+                data[i + 1] = data[i]
+                if (i === position) {
+                    data[i] = newEl;
+                }
+            }
+        }
+        console.log(data)
+        // dynamic
+        function insert() {
+            let data2 = [65, 77, 76, 1, 6, 8, 12]
+            let position = document.getElementById('position').value;
+            let newEl = document.getElementById('newEl').value;
+            newEl = parseInt(newEl)
+            for (let i = data2.length - 1; i >= 0; i--) {
+
+                if (i >= position) {
+                    // increase a arr element or length;
+                    data2[i + 1] = data2[i]
+                    if (i == position) {
+                        data2[i] = newEl;
+                    }
+                }
+            }
+            console.log(data2);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="" id="position" placeholder="position">
+    <input type="text" name="" id="newEl" placeholder="newEl">
+    <button onclick="insert()">Insert</button>
+</body>
+
+</html>

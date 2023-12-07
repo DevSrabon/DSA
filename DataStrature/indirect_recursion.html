@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let money = 100;
+        let totalApples = 0;
+        function buyApples(x) {
+            if (x > 0) {
+                console.log("I have", x, "Bdt of apples", totalApples);
+                buyMore(x);
+            } else {
+                console.log("i don't have money", totalApples);
+            }
+        }
+        function buyMore(x) {
+            totalApples++;
+            buyApples(x - 10);
+        }
+        buyApples(money);
+    </script>
+</head>
+
+<body>
+    <h1>indirect recursion</h1>
+</body>
+
+</html>=

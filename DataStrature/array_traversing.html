@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let data = [54, 5, 6, 54, 65, 6, 84, 65]
+        // for (let index = 0; index < data.length; index++) {
+        //     document.write(data[index])
+        // }
+        function getElement() {
+            let el = document.getElementById('element').value;
+            if (el !== "" && typeof parseInt(el) === "number" && el >= 0) {
+
+                alert(data[el])
+            } else {
+                alert("enter valied")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="search" id="element">
+    <button onclick="getElement()">Get</button>
+</body>
+
+</html>
